@@ -1,0 +1,24 @@
+<section id="nosotros" class="section about">
+  <div class="section__inner about__grid">
+    <div class="about__text">
+      <span class="section__eyebrow">Nosotros</span>
+      <h2 class="section__title">Sobre el conjunto</h2>
+      <p>{{ conjunto.descripcion }}</p>
+
+      <ul class="about__facts">
+        <li><strong>Ubicación:</strong> {{ conjunto.direccion }}, {{ conjunto.ciudad }}</li>
+        <li><strong>Torres:</strong> {{ conjunto.torres }}</li>
+        <li><strong>Unidades residenciales:</strong> {{ conjunto.unidades }}</li>
+        <li><strong>Pisos por torre:</strong> {{ conjunto.pisos }}</li>
+        <li><strong>Año de construcción:</strong> {{ conjunto.anioConstruccion }}</li>
+        <li><strong>NIT:</strong> {{ conjunto.nit }}</li>
+      </ul>
+    </div>
+
+    <div class="about__visual">
+      <div class="about__visual-box">
+        <span class="about__visual-icon">🏢</span>
+      </div>
+    </div>
+  </div>
+</section>

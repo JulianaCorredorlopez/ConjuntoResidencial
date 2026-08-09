@@ -1,0 +1,25 @@
+<section id="anuncios" class="section section--alt announcements">
+  <div class="section__inner">
+    <div class="section__heading">
+      <span class="section__eyebrow">Novedades</span>
+      <h2 class="section__title">Anuncios recientes</h2>
+      <p class="section__subtitle">Mantente al día con la información oficial publicada por la administración.</p>
+    </div>
+
+    <div class="announcements__list">
+      @for (anuncio of anuncios; track anuncio.titulo) {
+        <article class="card announcements__item announcements__item--{{ anuncio.tipo }}">
+          <span class="announcements__icon">{{ iconoPara(anuncio.tipo) }}</span>
+          <div class="announcements__body">
+            <div class="announcements__meta">
+              <time>{{ anuncio.fecha }}</time>
+              <span class="announcements__tag">{{ anuncio.tipo }}</span>
+            </div>
+            <h3>{{ anuncio.titulo }}</h3>
+            <p>{{ anuncio.contenido }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

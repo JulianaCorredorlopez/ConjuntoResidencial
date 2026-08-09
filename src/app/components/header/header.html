@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="header__inner">
+    <a href="#inicio" class="header__brand" (click)="cerrarMenu()">
+      <span class="header__brand-icon">🏘️</span>
+      <span class="header__brand-text">{{ conjunto.nombre }}</span>
+    </a>
+
+    <button class="header__toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuAbierto()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="header__nav" [class.header__nav--open]="menuAbierto()">
+      <a href="#inicio" (click)="cerrarMenu()">Inicio</a>
+      <a href="#nosotros" (click)="cerrarMenu()">Nosotros</a>
+      <a href="#servicios" (click)="cerrarMenu()">Servicios</a>
+      <a href="#administracion" (click)="cerrarMenu()">Administración</a>
+      <a href="#anuncios" (click)="cerrarMenu()">Anuncios</a>
+      <a href="#galeria" (click)="cerrarMenu()">Galería</a>
+      <a href="#contacto" class="header__nav-cta" (click)="cerrarMenu()">Contacto</a>
+    </nav>
+  </div>
+</header>

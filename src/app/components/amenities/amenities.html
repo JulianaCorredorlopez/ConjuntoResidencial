@@ -1,0 +1,21 @@
+<section id="servicios" class="section section--alt amenities">
+  <div class="section__inner">
+    <div class="section__heading">
+      <span class="section__eyebrow">Servicios</span>
+      <h2 class="section__title">Zonas comunes y amenidades</h2>
+      <p class="section__subtitle">
+        Espacios pensados para el bienestar, la recreación y la sana convivencia de todos los residentes.
+      </p>
+    </div>
+
+    <div class="amenities__grid">
+      @for (item of amenidades; track item.titulo) {
+        <div class="card amenities__card">
+          <span class="amenities__icon">{{ item.icono }}</span>
+          <h3>{{ item.titulo }}</h3>
+          <p>{{ item.descripcion }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

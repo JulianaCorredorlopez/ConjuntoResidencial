@@ -1,0 +1,128 @@
+.administration__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.administration__panel {
+  padding: 28px;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    margin: 16px 0 8px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+}
+
+.administration__list {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+
+  dt {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  dd {
+    margin: 2px 0 0;
+    font-weight: 500;
+  }
+}
+
+.administration__consejo {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+    gap: 12px;
+  }
+}
+
+.administration__consejo-cargo {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.administration__consejo-nombre {
+  font-weight: 600;
+  text-align: right;
+}
+
+.administration__cuota {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.administration__cuota-fecha {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.administration__simple-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+
+  li {
+    margin-bottom: 6px;
+  }
+}
+
+.administration__docs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+
+  li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  strong {
+    display: block;
+    font-size: 0.95rem;
+  }
+
+  p {
+    margin: 2px 0 0;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+}
+
+.administration__docs-icon {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 860px) {
+  .administration__grid {
+    grid-template-columns: 1fr;
+  }
+}

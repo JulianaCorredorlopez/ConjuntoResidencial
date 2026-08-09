@@ -1,0 +1,17 @@
+<section id="galeria" class="section gallery">
+  <div class="section__inner">
+    <div class="section__heading">
+      <span class="section__eyebrow">Espacios</span>
+      <h2 class="section__title">Galería</h2>
+      <p class="section__subtitle">Un vistazo a los espacios comunes del conjunto.</p>
+    </div>
+
+    <div class="gallery__grid">
+      @for (item of galeria; track item.titulo) {
+        <div class="gallery__item" [style.background]="gradientePara(item)">
+          <span class="gallery__label">{{ item.titulo }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

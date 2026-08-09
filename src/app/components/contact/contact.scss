@@ -1,0 +1,35 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.contact__card {
+  padding: 28px 22px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+
+a.contact__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact__icon {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,74 @@
+<section id="administracion" class="section administration">
+  <div class="section__inner">
+    <div class="section__heading">
+      <span class="section__eyebrow">Gestión</span>
+      <h2 class="section__title">Administración del conjunto</h2>
+      <p class="section__subtitle">
+        Información sobre la gestión administrativa, el consejo y los canales oficiales de atención.
+      </p>
+    </div>
+
+    <div class="administration__grid">
+      <div class="card administration__panel">
+        <h3>Información general</h3>
+        <dl class="administration__list">
+          <div>
+            <dt>Empresa administradora</dt>
+            <dd>{{ admin.empresaAdministradora }}</dd>
+          </div>
+          <div>
+            <dt>Administrador</dt>
+            <dd>{{ admin.administrador }}</dd>
+          </div>
+          <div>
+            <dt>Revisor fiscal</dt>
+            <dd>{{ admin.revisorFiscal }}</dd>
+          </div>
+          <div>
+            <dt>Horario de atención</dt>
+            <dd>{{ admin.horarioAtencion }}<br />{{ admin.horarioSabados }}</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="card administration__panel">
+        <h3>Consejo de administración</h3>
+        <ul class="administration__consejo">
+          @for (miembro of admin.consejo; track miembro.nombre) {
+            <li>
+              <span class="administration__consejo-cargo">{{ miembro.cargo }}</span>
+              <span class="administration__consejo-nombre">{{ miembro.nombre }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="card administration__panel">
+        <h3>Cuota de administración</h3>
+        <p class="administration__cuota">{{ admin.cuotaAdministracion }}</p>
+        <p class="administration__cuota-fecha">Fecha límite de pago: {{ admin.fechaLimitePago }}</p>
+        <h4>Canales de pago</h4>
+        <ul class="administration__simple-list">
+          @for (canal of admin.canalesPago; track canal) {
+            <li>{{ canal }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="card administration__panel">
+        <h3>Documentos</h3>
+        <ul class="administration__docs">
+          @for (doc of admin.documentos; track doc.nombre) {
+            <li>
+              <span class="administration__docs-icon">📄</span>
+              <div>
+                <strong>{{ doc.nombre }}</strong>
+                <p>{{ doc.descripcion }}</p>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

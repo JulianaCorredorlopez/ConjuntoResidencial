@@ -1,0 +1,35 @@
+<section id="contacto" class="section section--alt contact">
+  <div class="section__inner">
+    <div class="section__heading">
+      <span class="section__eyebrow">Contacto</span>
+      <h2 class="section__title">¿Necesitas comunicarte con la administración?</h2>
+      <p class="section__subtitle">Estos son los canales oficiales para radicar solicitudes, PQRS o consultas.</p>
+    </div>
+
+    <div class="contact__grid">
+      <a class="card contact__card" [href]="'tel:' + conjunto.telefono">
+        <span class="contact__icon">📞</span>
+        <h3>Teléfono</h3>
+        <p>{{ conjunto.telefono }}</p>
+      </a>
+
+      <a class="card contact__card" [href]="'mailto:' + conjunto.email">
+        <span class="contact__icon">✉️</span>
+        <h3>Correo electrónico</h3>
+        <p>{{ conjunto.email }}</p>
+      </a>
+
+      <div class="card contact__card">
+        <span class="contact__icon">📍</span>
+        <h3>Dirección</h3>
+        <p>{{ conjunto.direccion }}<br />{{ conjunto.ciudad }}</p>
+      </div>
+
+      <div class="card contact__card">
+        <span class="contact__icon">🕑</span>
+        <h3>Horario de oficina</h3>
+        <p>{{ admin.horarioAtencion }}<br />{{ admin.horarioSabados }}</p>
+      </div>
+    </div>
+  </div>
+</section>

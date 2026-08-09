@@ -1,0 +1,33 @@
+.amenities__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.amenities__card {
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.amenities__icon {
+  display: block;
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
